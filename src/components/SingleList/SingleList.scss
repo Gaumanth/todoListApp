@@ -1,0 +1,28 @@
+@import "../../css-config/mixins.scss";
+.single-list{
+    border: 1px solid gray;
+    background-color: rgb(218, 37, 218);
+    width:90%;
+    height: 40px;
+    list-style-type: none;
+    text-align: center;
+    @include md{
+        height: 50px;
+        display: flex;
+    }
+    @include md{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    li{
+        margin-right: 20px;
+        font-size: 25px;
+        color: white;
+        @include md{
+            margin-top: 5px;
+            font-size: 30px;
+        }
+    }
+}

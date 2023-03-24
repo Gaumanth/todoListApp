@@ -1,0 +1,45 @@
+@import "../../css-config/mixins.scss";
+.header{
+    margin: 20px;
+
+    .heading{
+        font-size: 40px;
+        @include md{
+            font-size: 60px ;
+        }
+    }
+    .input-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap:18px;
+        @include md{
+            flex-direction: row;
+        }
+        .input{
+            font-size: 25px;
+            border: 1px solid gray;
+            @include md{
+                font-size: 40px ;
+            }
+        }
+        .btn{
+            background: rgb(133, 233, 133);
+            border: 1px solid gray;
+            font-size: 18px;
+            width: 50%;
+            height: 30px;
+            margin: 0 auto;
+            @include md{
+                width: 100px;
+                margin: 0;
+                height: 50px;
+            }
+            &:hover{
+                cursor: pointer;
+             }
+        }
+       
+    }
+}
