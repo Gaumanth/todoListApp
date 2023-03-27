@@ -1,10 +1,21 @@
 import React from 'react'
 import "./SingleList.scss"
-const SingleList = ({text}) => {
+const SingleList = ({text,id,handleDeleteClick}) => {
+
   return (
-    <ul className='single-list'>
+    <>
+        {/* <ul className='single-list'>
         <li>{text}</li>
-    </ul>
+        
+  </ul> */}
+
+
+    <div className='single-list'>
+      <div className='li'>{text}</div>
+      <button className='btn' onClick={()=> handleDeleteClick(id)}>Delete</button>
+    </div>
+    </>
+
   )
 }
 

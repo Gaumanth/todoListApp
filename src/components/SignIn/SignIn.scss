@@ -1,0 +1,25 @@
+@import "../../css-config/mixins.scss";
+.signIn{
+    height: 800px;
+    margin: -207px 0px;
+    .container{
+        // border: 2px solid black;
+        .form{
+            border: 3px solid rgb(65, 6, 64);
+            border-radius: 10px;
+            width: 85%;
+            margin: 211px auto;
+            padding: 22px;
+            @include md{
+                width: 35%;
+                margin: 200px auto;
+                padding: 20px;
+            }
+            
+        }
+    }
+}
+
+
+
+

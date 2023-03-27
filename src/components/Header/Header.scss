@@ -1,9 +1,46 @@
 @import "../../css-config/mixins.scss";
+.save-btn{
+    display: inline-block;
+    position: absolute;
+    width: 18%;
+    height: 39px;
+    margin: 187px 300px;
+    border-radius: 5px;
+    background-color: #9542a9;
+    border: 1px solid grey;
+    color: white;
+    @include md{
+        width: 6%;
+        height: 51px;
+        margin: 163px 1300px;
+        font-size: 30px;
+    }
+    &:hover{
+        background-color: #e9bbf5;
+        color: black;
+    }
+}
 .header{
-    margin: 20px;
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url();
+    width: 100%;
+    height: 1000px;
+    @include md{
+        margin: 0px;
+    }
+    .header-conatiner{
+        margin: 11px;
+        height: 900px;
+    }
     .heading{
         font-size: 40px;
+        color: rgb(250, 245, 245);
+        background-color: rgb(17, 67, 111);
+        display: inline-block;
+        border-radius: 10px;
+        padding: 10px;
         @include md{
             font-size: 60px ;
         }
@@ -13,31 +50,36 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        margin-top: 46px;
         gap:18px;
         @include md{
             flex-direction: row;
         }
         .input{
-            font-size: 25px;
+            // font-size: 25px;
             border: 1px solid gray;
+
             @include md{
                 font-size: 40px ;
+                width: 60%;
+
             }
         }
         .btn{
             background: rgb(133, 233, 133);
             border: 1px solid gray;
             font-size: 18px;
-            width: 50%;
-            height: 30px;
+            width: 40%;
+            height: 55px;
             margin: 0 auto;
             @include md{
                 width: 100px;
                 margin: 0;
-                height: 50px;
+                height: 64px;
             }
             &:hover{
                 cursor: pointer;
+                background-color: greenyellow;
              }
         }
        
