@@ -71,6 +71,10 @@
                 .signUp-btn{
                     width: 30%;
                     height: 35px;
+
+                 &:hover{
+                    background-color: red($color: #ca4f4f);
+                 }
                 }
                 
             }
