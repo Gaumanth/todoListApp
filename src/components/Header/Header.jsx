@@ -7,9 +7,9 @@ const Header = () => {
   const [text,setText] = useState("");
   const [data,setData] = useState([]);
   useEffect(()=>{
-      let todos = JSON.parse(localStorage.getItem('todo-list'));
-      console.log(todos)
-      setData(todos);
+      // let todos = JSON.parse(localStorage.getItem('todo-list'));
+      // console.log(todos)
+      // setData(todos);
 
   },[])
 
