@@ -19,12 +19,12 @@ const SignIn = () => {
                   <input type="password" placeholder='Password' />
                     <div className="btns">
                       <button className='login-btn'>LOGIN</button>
-                      <div className='fp'>Forgot Password?</div>
+                      <div className='fp'>Forgot Password?    </div>
                     </div>
                 </div>
                 <div className="bottom">
                   <div className="nau">not a user?</div>
-                  <button className='signUp-btn' onClick={()=>navigate("/signup")} >SIGN up</button>
+                  <button className='signUp-btn' onClick={()=>navigate("/signup")} >SIGN UP</button>
                 </div>
             </div>
           </div>
