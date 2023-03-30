@@ -1,14 +1,16 @@
 import React from 'react'
 import BackImg from "../../assets/background.jpg"
 import formImg from "../../assets/form-background.jpg"
-import "./signUn.scss"
-const signUp = () => {
+import { useNavigate } from 'react-router-dom'
+import "./SignUp.scss"
+const SignUp = () => {
+  const navigate=useNavigate();
   return (
     <div className='form' style={{backgroundImage : `url(${BackImg})`}}>
           <div className="container" style={{backgroundImage : `url(${formImg})`}}>
             <div className="form-content">
                 <div className="top">
-                  <h1 className='heading1'>Welcome To Todo App</h1>
+                  <h1 className='heading1'>Welcome To Todo</h1>
                   <h2 className='heading2' >SignUp</h2>
                 </div>
                 <div className="middle">
@@ -22,7 +24,7 @@ const signUp = () => {
                 </div>
                 <div className="bottom">
                   <div className="nau">Already a user?</div>
-                  <button className='login-btn'>SIGN IN</button>
+                  <button className='login-btn' onClick={()=>navigate('/')}>SIGN IN</button>
                 </div>
             </div>
           </div>
@@ -30,4 +32,4 @@ const signUp = () => {
   )
 }
 
-export default signUp
+export default SignUp
