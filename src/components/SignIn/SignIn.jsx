@@ -3,6 +3,8 @@ import BackImg from "../../assets/background.jpg"
 import formImg from "../../assets/form-background.jpg"
 import { json, useNavigate } from 'react-router-dom'
 import "./SignIn.scss"
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../firebase'
 import jsonData from "../../data.json";
 const SignIn = () => {
   const navigate=useNavigate();
@@ -15,17 +17,21 @@ const SignIn = () => {
     setPassword(e.target.value)
   }
   const handleLogin=()=>{
-    const flagArray = jsonData.map((item) => item.email === email && item.password === password)
-    
-    const flag = flagArray.filter((item) => item === true);
-    const flagValue = flag[0];
-    if(flagValue === true){
-     navigate("/todo")
-    }
-    else{
-      alert("Email or Password is Invalid")
-    }
-    
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log("login successfull");
+          navigate('/todo');
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert("Invalid user name or password");
+          console.log(errorMessage);
+        });
+          
     
   }
 
